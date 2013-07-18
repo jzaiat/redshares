@@ -1,0 +1,2 @@
+<% selector = ".#{redshare_css(redshared)}" %>
+$("<%= selector %>").each(function(){$(this).replaceWith("<%= escape_javascript redshare_link(redshared, user) %>")});

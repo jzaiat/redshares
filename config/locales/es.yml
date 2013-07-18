@@ -1,0 +1,20 @@
+# Spanish strings go here for Rails i18n
+en:
+  # my_label: "My label"
+  field_redshare: Compartir
+  permission_view_issue_redshares: Ver lista de compartidos
+  permission_add_redshare: Agregar compartido
+  permission_delete_redshare: Eliminar compartidos
+  label_redshared_issues: Peticiones compartidas
+  label_issue_redshares: Compartidos
+  label_search_for_redshares: Buscar compartidos para agregar
+  button_redshare: Compartir
+  button_unredshare: Dejar de compartir
+  field_issue_shares: Compartido
+  settings_share_to: Compartir con usuarios con roles
+  readonly_share: Sólo lectura
+  edit_share: Modificable
+  label_share_type: Compartir como
+  mail_subject_redshare: "Te compartieron un/a %{redshare_type}"
+  mail_body_redshare: 'El usuario %{shared_by} te compartió un/a %{redshare_type}. Para acceder, hacé click en el siguiente link:'
+  mail_redshare_link: 'Acceder'

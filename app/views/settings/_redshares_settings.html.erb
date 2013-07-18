@@ -1,0 +1,9 @@
+<%- roles = Role.find(:all) -%>
+<p>
+	<label><%= l(:settings_share_to)%></label>
+	  <% roles.each do |role| %>
+	        <%= check_box_tag 'settings[roles][]', role.id, (Setting.plugin_redshares['roles'])? Setting.plugin_redshares['roles'].include?(role.id.to_s) : false -%>
+	        <%= h role.to_s -%>
+	  </br>
+	  <% end %>
+</p>

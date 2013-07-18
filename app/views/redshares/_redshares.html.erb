@@ -1,0 +1,12 @@
+<%  if User.current.allowed_to?(:edit_redshares, @project) && redshared.editable?(User.current) %>
+<div class="contextual">
+<%= link_to l(:button_add),
+      {:controller => 'redshares', :action => 'new', :object_type => redshared.class.name.underscore, :object_id => redshared},
+      :remote => true,
+      :method => 'get' %>
+</div>
+<% end %>
+
+<h3><%= l(:label_issue_redshares) %> (<%= redshared.redshare_users.size %>)</h3>
+
+<%= redshares_list(redshared) %>

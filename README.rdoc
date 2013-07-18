@@ -1,0 +1,3 @@
+= redshares
+
+Redmine plugin to share issues with other users, using readonly or edit permission.

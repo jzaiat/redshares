@@ -1,0 +1,4 @@
+<% @users.each do |user| %>
+  $("#issue_redshare_user_ids_<%= user.id %>").remove();
+<% end %>
+$('#redshares_inputs').append('<%= escape_javascript(redshares_checkboxes(nil, @users, true)) %>');

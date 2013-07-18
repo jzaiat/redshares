@@ -1,0 +1,34 @@
+<%= stylesheet_link_tag 'redshares', :plugin => 'redshares' %>
+<h3 class="title"><%= l(:permission_add_redshare) %></h3>
+
+<%= form_tag({:controller => 'redshares',
+              :action => (redshared ? 'create' : 'append'),
+              :object_type => (redshared && redshared.class.name.underscore),
+              :object_id => redshared,
+              :project_id => @project},
+             :remote => true,
+             :method => :post,
+             :id => 'new-redshare-form') do %>
+
+  <p><%= label_tag 'user_search', l(:label_user_search) %><%= text_field_tag 'user_search', nil, :style => 'padding-left:20px !important' %></p>
+  <%= javascript_tag "observeSearchfield('user_search', 'users_for_redshare', '#{ escape_javascript url_for(:controller => 'redshares',
+                 :action => 'autocomplete_for_user',
+                 :object_type => (redshared && redshared.class.name.underscore),
+                 :object_id => redshared,
+                 :project_id => @project) }')" %>
+
+  <div id="users_for_redshare">
+    <%= principals_check_box_tags 'redshare[user_ids][]', (redshared ? redshared.addable_redshare_users : nil) %>
+  </div>
+  
+  <div id="roles_for_redshare">
+  	<%= label_tag 'share_type', l(:label_share_type) %>
+  	<%- redshares_types = [[l(:readonly_share), false],[l(:edit_share),true]] -%> 
+  	<%= select_tag "editable", options_for_select(redshares_types) %>
+  </div>
+
+  <p class="buttons">
+    <%= submit_tag l(:button_add), :name => nil, :onclick => "hideModal(this);" %>
+    <%= submit_tag l(:button_cancel), :name => nil, :onclick => "hideModal(this);", :type => 'button' %>
+  </p>
+<% end %>

@@ -1,0 +1,2 @@
+$('#ajax-modal').html('<%= escape_javascript(render(:partial => 'redshares/new', :locals => {:redshared => @redshared})) %>');
+$('#redshares').html('<%= escape_javascript(render(:partial => 'redshares/redshares', :locals => {:redshared => @redshared})) %>');

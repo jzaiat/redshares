@@ -1,0 +1,8 @@
+<%= stylesheet_link_tag 'redshares', :plugin => 'redshares' %>
+<% if @issue && User.current.allowed_to?(:view_redshares, @project)%>
+	<% content_for :sidebar do %>
+	    <div id="redshares">
+	      <%= render :partial => 'redshares/redshares', :locals => {:redshared => @issue} %>
+	    </div>
+	<% end %>
+<% end %>
