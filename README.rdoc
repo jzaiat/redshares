@@ -35,4 +35,9 @@ Finally, after the plugin is installed you will need to restart Redmine for the 
 
 - Configure Redshare module permissions for each role (Administration > Roles and permissions)
 
+== Screenshots
+
+http://www.redmine.org/attachments/download/10090/redshares.png
+http://www.redmine.org/attachments/download/10091/redshares_add.png
+
 Enjoy!
