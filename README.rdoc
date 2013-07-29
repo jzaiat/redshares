@@ -1,3 +1,38 @@
-= redshares
+= Redshares
 
 Redmine plugin to share issues with other users, using readonly or edit permission.
+
+
+This plugin allows you to share an issue with other users, using readonly or editable permissions. When shared and on issue modification, the shared users will be notified via email.
+There are two possible permissions to assign:
+
+- The readonly permission is like a watcher, but the issue is visible for him in the listings.
+- The editable permission is like assigning the issue to him, the user has visibility and he can modify the issue.
+
+This is my humble attempt to extend the issue assignment to many users (also adding management of visibility, notification and permissions).
+
+Please feel free to propose fixes, changes and improvements.
+
+
+== Installation notes
+
+To install the plugin, execute the following commands from the root of your Redmine directory:
+
+First clone from repository (or download pack and extract in plugins folder)
+  cd plugins
+  git clone https://github.com/jzaiat/redshares
+Then, update the database from the root of your Redmine directory:
+  cd ..
+  rake redmine:plugins:migrate RAILS_ENV=production
+Finally, after the plugin is installed you will need to restart Redmine for the plugin to be available.
+
+
+== Configuration
+
+- Login to Redmine, go to Administration > Plugins and click in Configure in Redshares plugin. Select which roles issues will be share to.
+
+- Add the module to Administration > Settings > Project > Default enabled modules for new projects, or you can enable it on each project that you need the plugin.
+
+- Configure Redshare module permissions for each role (Administration > Roles and permissions)
+
+Enjoy!
