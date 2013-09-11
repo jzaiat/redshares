@@ -38,6 +38,10 @@ module Redshares
 
       module InstanceMethods
         def initialize_with_redshares(attributes=nil, *args)
+          
+           # on receive mail issue args have the value args = []
+          args = {} if args.class == Array && args.size == 0
+          
           initialize_without_redshares(attributes, args)
           if new_record?
             # set default values for new records only
