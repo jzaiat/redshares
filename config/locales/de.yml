@@ -1,0 +1,19 @@
+# German strings go here for Rails i18n
+de:
+  field_redshare: Share-Benutzer
+  permission_view_issue_redshares: Share-Benutzer ansehen
+  permission_add_redshare: Share-Benutzer hinzufügen
+  permission_delete_redshare: Share-Benutzer löschen
+  label_redshared_issues: Geteiltes Ticket
+  label_issue_redshares: Share-Benutzer
+  label_search_for_redshares: Suche nach Shares zum hinzufügen
+  button_redshare: Share
+  button_unredshare: Unshare
+  field_issue_shares: Share
+  settings_share_to: Teile mit Benutzerrollen
+  readonly_share: Nur-Lesen
+  edit_share: Schreibend
+  label_share_type: Teile mit Berechtigung 
+  mail_subject_redshare: "%{redshare_type} wurde mit Ihnen geteilt."
+  mail_body_redshare: 'Benutzer %{shared_by} hat eine %{redshare_type} mit Ihnen geteilt. Um sie zu sehen, klicken Sie auf folgenden Link:'
+  mail_redshare_link: 'Ansehen'
