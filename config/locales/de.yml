@@ -14,6 +14,6 @@ de:
   readonly_share: Nur-Lesen
   edit_share: Schreibend
   label_share_type: Teile mit Berechtigung 
-  mail_subject_redshare: "%{redshare_type} wurde mit Ihnen geteilt."
+  mail_subject_redshare: "%{redshare_type} %{shared_by} hat ein Ticket mit Ihnen geteilt!"
   mail_body_redshare: 'Benutzer %{shared_by} hat ein %{redshare_type}-Ticket mit Ihnen geteilt. Um dieses Ticket zu sehen, klicken Sie auf folgenden Link:'
   mail_redshare_link: 'Ticket im Browser öffnen'
