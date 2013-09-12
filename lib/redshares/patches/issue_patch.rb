@@ -12,7 +12,7 @@ module Redshares
           acts_as_redshareable
 
           safe_attributes 'redshare_user_ids',
-            :if => lambda {|issue, user| issue.new_record? && user.allowed_to?(:edit_issue_redshares, issue.project)} 
+            :if => lambda {|issue, user| issue.new_record? && user.allowed_to?(:edit_issue_redshares, issue.project)}
 
           alias_method_chain :visible?, :redshares
           alias_method_chain :editable?, :redshares
