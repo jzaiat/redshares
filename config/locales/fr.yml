@@ -1,0 +1,20 @@
+# French strings go here for Rails i18n
+fr:
+  # my_label: "My label"
+  field_redshare: Partager
+  permission_view_issue_redshares: Voir la liste des partages
+  permission_add_redshare: Ajouter un partage
+  permission_delete_redshare: Supprimer un partage
+  label_redshared_issues: Demandes partagées
+  label_issue_redshares: Partages
+  label_search_for_redshares: Rechercher des partages à ajouter
+  button_redshare: Partager
+  button_unredshare: Ne plus partager
+  field_issue_shares: Partager
+  settings_share_to: Partager avec un utilisateur qui a un rôle de
+  readonly_share: Lecture seule
+  edit_share: Edition
+  label_share_type: Partager en tant que
+  mail_subject_redshare: "%{redshare_type} a été partagé avec vous"
+  mail_body_redshare: "L\'utilisateur %{shared_by} shared a %{redshare_type} with you. To see it, click on the following link:"
+  mail_redshare_link: 'Voir'
