@@ -25,12 +25,12 @@ module Redshares
           @shared_by = (redshare.issue.assigned_to)? redshare.issue.assigned_to.to_s : redshare.issue.author.to_s
           @redshare_type = redshare.issue.tracker
           @issue = redshare.issue
-          @issue_url = url_for(:controller => 'issues', :action => 'show', :id => redshare.issue)          
-          subject = l(:mail_subject_redshare, :redshare_type => @redshare_type)
+          @issue_url = url_for(:controller => 'issues', :action => 'show', :id => redshare.issue)
+          subject = l(:mail_subject_redshare, :redshare_type => @redshare_type, :priority => @issue.priority, :shared_by => @shared_by)
 
           recipients = redshare.user.mail
           mail :to => recipients,
-            :subject => "[#{redshare.issue.project.name} - #{redshare.issue.tracker.name} ##{redshare.issue.id}] (#{redshare.issue.status.name}) #{subject}" 
+               :subject => "[#{redshare.issue.project.name} - #{redshare.issue.tracker.name} ##{redshare.issue.id}] (#{redshare.issue.status.name}) #{subject}"
         end
 
       end
