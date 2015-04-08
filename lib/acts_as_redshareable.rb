@@ -32,7 +32,7 @@ module Redmine
         # Returns an array of users that are proposed as redshares
         def addable_redshare_users
           members = self.project.users_by_role()
-          filter_roles = Role.find(Redshares.settings['roles'])
+          filter_roles = Role.where(:id => Redshares.settings['roles'])
           valid_users = filter_roles.map{|r| members[r]}.flatten
           valid_users.uniq! #remove duplicates
           #disallow to redshare to assigned

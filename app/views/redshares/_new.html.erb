@@ -18,7 +18,7 @@
                  :project_id => @project) }')" %>
 
   <div id="users_for_redshare">
-    <%= principals_check_box_tags 'redshare[user_ids][]', (redshared ? redshared.addable_redshare_users : nil) %>
+    <%= principals_check_box_tags 'redshare[user_ids][]', (redshared ? redshared.addable_redshare_users.compact : nil) %>
   </div>
   
   <div id="roles_for_redshare">
